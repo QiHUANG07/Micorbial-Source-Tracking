@@ -222,7 +222,9 @@ ggplot(proptab_roc,aes(x = 1 - specificity, y = sensitivity,color=.level)) +
 #Marine sediment source tracking#
 #################################
 #import the source dataset
-load(file="/media/HQ/EMP_data/model_new/Train_dataset/otu_3654.RData")
+inte_otu_abu = read.table(file="3654_source_dataset.txt", header=T, row.names=1, sep="\t",check.names=FALSE, quote="")
+otu_3654 <- data.frame(t(inte_otu_abu),check.names=FALSE)#save the otu information for later prediction for real dataset
+otu_3654$OTU_ID = rownames(otu_3654)
 
 #import real dataset
 real_dataset <- "sediment-cr-97.txt"
