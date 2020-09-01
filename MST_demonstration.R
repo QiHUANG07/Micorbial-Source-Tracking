@@ -26,7 +26,7 @@ inte_otu_abu = read.table(file="3654_source_dataset.txt", header=T, row.names=1,
 inte_otu_abu<-as.matrix(inte_otu_abu) 
 class(inte_otu_abu)<-"numeric"
 
-design = read.table("Training_design.csv",  header=T, sep=",",check.names=FALSE)
+design = read.table("design.csv",  header=T, sep=",",check.names=FALSE)
 
 pred_list<-list()
 proptab_list<-list()
